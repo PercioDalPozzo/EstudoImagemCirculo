@@ -1,16 +1,15 @@
-using System.Diagnostics;
 using SixLabors.ImageSharp.PixelFormats;
 
 namespace EstudoImagemCirculo;
 
-public class PixelConverter 
+public class PixelConverter
 {
     private readonly ILuminosidade _luminosidade;
-    
+
     public PixelConverter(ILuminosidade luminosidade)
     {
         _luminosidade = luminosidade;
-    }        
+    }
 
     public double PixelToFator(Rgba32 pixelColor)
     {
