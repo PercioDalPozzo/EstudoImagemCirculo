@@ -4,7 +4,7 @@ using SixLabors.ImageSharp.PixelFormats;
 
 internal class Program
 {
-    private const int resolucao = 50;
+    private const int resolucao = 80;
     private const double saturacao = 0.4;
     private const int tamanhoPixel = 25;
     private const string caminhoOrigem = "../../../../Eu.jpg";

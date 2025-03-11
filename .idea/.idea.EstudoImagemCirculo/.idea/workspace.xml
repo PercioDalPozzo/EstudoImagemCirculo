@@ -8,14 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95b1e834-bb3b-415d-9539-8f0c45653715" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/EstudoImagemCirculo.sln" beforeDir="false" afterPath="$PROJECT_DIR$/EstudoImagemCirculo.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Converter/Controlador.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Conversor/Controlador.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Converter/ImageConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Conversor/ImageConverter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Converter/Matriz.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Conversor/Matriz.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Converter/PixelConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Conversor/PixelConverter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/EstudoImagemCirculo.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Src/EstudoImagemElipse.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/PrintImagem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/PrintImagem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.EstudoImagemCirculo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EstudoImagemCirculo/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +97,7 @@
       <workItem from="1740590398351" duration="168000" />
       <workItem from="1740663572831" duration="2006000" />
       <workItem from="1741031196721" duration="1102000" />
-      <workItem from="1741716933574" duration="4956000" />
+      <workItem from="1741716933574" duration="5144000" />
     </task>
     <servers />
   </component>
