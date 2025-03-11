@@ -84,8 +84,10 @@ Para usar o conversor, abra o projeto na IDE e defina o caminho da imagem e a re
 
 ## Exemplo de Saída
 
+Imagem com 50% de resolução
 ![Imagem com 50% de resolução](ImagemGerada-resolucao50.jpg)
 
+Imagem com 80% de resolução
 ![Imagem com 80% de resolução](ImagemGerada-resolucao80.jpg)
 
 
