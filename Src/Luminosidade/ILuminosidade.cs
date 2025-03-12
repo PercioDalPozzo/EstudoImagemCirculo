@@ -1,6 +1,6 @@
 using SixLabors.ImageSharp.PixelFormats;
 
-namespace EstudoImagemCirculo;
+namespace EstudoImagemElipse;
 
 public interface ILuminosidade
 {

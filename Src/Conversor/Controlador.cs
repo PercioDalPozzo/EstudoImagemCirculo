@@ -1,4 +1,4 @@
-namespace EstudoImagemCirculo;
+namespace EstudoImagemElipse;
 
 public class Controlador
 {

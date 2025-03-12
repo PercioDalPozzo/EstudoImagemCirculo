@@ -1,6 +1,6 @@
 using SixLabors.ImageSharp.PixelFormats;
 
-namespace EstudoImagemCirculo;
+namespace EstudoImagemElipse;
 
 public class Luminosidade_R1_G8_B1 : ILuminosidade
 {

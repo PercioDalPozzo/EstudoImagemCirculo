@@ -1,7 +1,7 @@
 using System.Drawing;
 using System.Drawing.Imaging;
 
-namespace EstudoImagemCirculo;
+namespace EstudoImagemElipse;
 
 public class PrintImagem
 {
@@ -25,7 +25,7 @@ public class PrintImagem
                 var x = item.X * tamanhoPixel + tamanhoPixel - raio;
                 var y = item.Y * tamanhoPixel + tamanhoPixel - raio;
 
-                //Circulo
+                //Elipse
                 g.FillEllipse(brush, x, y, tamanhoElipse, tamanhoElipse);
 
                 //Quadrado

@@ -1,11 +1,10 @@
-# Conversor de imagem em "Imagem Elipse"
+# Conversor de Imagem em "Imagem Elipse"
 
 ## Descrição
 
-Este é um projeto de estudo desenvolvido que pode ser executado via linha de comando (CLI) ou pela IDE de desenvolvimento. 
-O objetivo é carregar uma imagem, processar seus pixels e gerar uma nova imagem formada pela forma geometrica "Elipse".
-Para ficar mais claro a compreenção, será utilizado o termo "PixelElipse".
-
+Este é um projeto de estudo desenvolvido para ser executado via linha de comando (CLI) ou diretamente pela IDE de desenvolvimento. O objetivo é carregar uma imagem, processar seus pixels e gerar uma nova imagem composta por formas geométricas do tipo "Elipse". 
+Assim com uma imagem é formada por pixels coloridos, a nossa imagem será formada por elipses. 
+Para facilitar a compreensão, utilizaremos o termo "PixelElipse".
 
 ## Requisitos
 
@@ -21,78 +20,78 @@ dotnet add package SixLabors.ImageSharp
 
 ## Funcionalidades
 
-- Carregamento de imagens em formatos comuns: JPEG, PNG, BMP, GIF, TIFF.
-- Leitura dos pixels da imagem e criação de uma matriz de dados.
+- Suporte a formatos comuns de imagem: JPEG, PNG, BMP, GIF, TIFF.
+- Leitura e processamento dos pixels da imagem, criando uma matriz de dados.
 - Conversão da luminosidade em "PixelElipse" para formar a nova imagem.
 - Geração de um arquivo `.jpg`.
 - Possibilidade de configurar diferentes métodos de cálculo de luminosidade.
-- Configuração de resolução em percentual, isso indica o quão nitida será a imagem final.
-- Saturação irá aumentar ou diminuir o "PixelElipse"
-- Tamanho do pixel define qual é o tamanho ocupado pelo "PixelElipse". Esse valor influencia diretamente no tamanho final da imagem e em sua qualidade, pois determina a granularidade e a resolução da conversão.
 
 
-## Como funciona
+## Como Funciona
 
-1. A imagem é carregada e criada uma matriz com as informações da imagem
-2. Cada pixel, ou conjunto de pixel tem sua luminosidade calculada e convertido em uma coordenada.
-3. A matriz é lida e para cada coordenada teremos um "PixelElipse" desenhado na nova imagem
-4. O resultado é salvo em um arquivo `.jpg`, onde os .
+1. A imagem é carregada e convertida em uma matriz contendo suas informações.
+2. Cada pixel, ou conjunto de pixels, tem sua luminosidade calculada e convertida em uma coordenada.
+3. A matriz é processada e, para cada coordenada, um "PixelElipse" é desenhado na nova imagem.
+4. O resultado é salvo em um arquivo `.jpg`.
 
+### Configurações
 
-## Classe `Matriz.cs`
-A classe Matriz é responsável por armazenar as coordenadas dos pixels da imagem. Ela contém uma coleção de coordenadas representadas pelos valores:
-X: Posição horizontal do pixel.
-Y: Posição vertical do pixel.
-Luminosidade: Intensidade da luz do pixel, que influencia na geração da nova imagem.
+#### Resolução
+- Definição da resolução em percentual, determinando a nitidez da imagem final.
+- Exemplo:
+  - **100%** significa que cada pixel original será convertido em um "PixelElipse".
+  - **50%** significa que será analisado um conjunto de 2 x 2 pixels, realizada uma media de luminosidade para gerar um "PixelElipse".
+  - **20%** significa que será analisado um conjunto de 5 x 5 pixels, realizada uma media de luminosidade para gerar um "PixelElipse".
 
-## Classe `Controlador.cs`
-A classe Controlador é responsável por redimensionar a imagem conforme a resolução desejada para a geração da nova imagem. Ela ajusta os parâmetros de escala e proporção, garantindo que a imagem final esteja de acordo com as especificações definidas pelo usuário.
-Também é possível definir a resolução da conversão em percentual:
-- **100%**: Cada pixel da imagem será convertido em um "PixelElipse". Essa resolução tente a gerar imagens extremamente grandes. Visto que se for configurado o tamanho do pixel como 20 por exemplo, uma imagem de 200x200 resultará em uma imagem de 4000x4000.
-- **50%**: O "PixelElipse" será baseado em um bloco de 2x2 pixels.
-- **25%**: O "PixelElipse" será baseado em um bloco de 4x4 pixels.
-Outros valores podem ser configurados conforme necessidade para ajustar a resolução e nível de detalhe.
+#### Saturação
+- Ajuste de saturação para aumentar ou diminuir a intensidade do "PixelElipse".
 
+#### Tamanho do Pixel
+- Influencia diretamente no tamanho e qualidade final da imagem.
 
-## Classe `ImageConverter.cs`
-Responsavel por receber a imagem e converter em uma Matriz
+## Estrutura do Código
 
+### `Matriz.cs`
+Responsável por armazenar estrutura da imagem em coordenadas. Cada coordenada será um "PixelsElipse". Ela contém:
 
-## Classe `PixelConverter`
-Responsável extrair a luminosidade em um valor numérico.
+- **X**: Posição horizontal do pixel.
+- **Y**: Posição vertical do pixel.
+- **Luminosidade**: Intensidade da luz do pixel.
 
+### `Controlador.cs`
+Responsável analisar os pixels da imagem conforme a resolução.
 
-## Classes de Luminosidade
+### `ImageConverter.cs`
+Responsável por receber a imagem e convertê-la em uma matriz de dados.
 
-O cálculo da luminosidade pode ser ajustado por diferentes classes, permitindo um ajuste fino conforme as cores da imagem original. Normalmente, utiliza-se a classe `Luminosidade_R21_G71_B01`, que representa melhor a percepção de luminosidade do olho humano, considerando os pesos:
+### `PixelConverter.cs`
+Responsável por extrair a luminosidade da imagem e convertê-la em um valor numérico.
+
+### Classes de Luminosidade
+O cálculo da luminosidade pode ser ajustado utilizando diferentes métodos. O padrão mais comum é `Luminosidade_R21_G71_B07`, baseado na percepção humana:
 
 - **21%** Vermelho (R * 0.21)
 - **71%** Verde (G * 0.71)
 - **07%** Azul (B * 0.07)
 
-Essa distribuição reflete melhor a forma como o olho humano percebe diferentes cores e seus brilhos relativos. A nomenclatura da classe `Luminosidade_R21_G71_B01` segue esse padrão para deixar claro as proporções utilizadas no cálculo de cada componente RGB.
-
 ## Uso
 
-Para usar o conversor, abra o projeto na IDE e defina o caminho da imagem e a resolução desejada. O arquivo será gerado na pasta raiz do projeto.
-
+### Execução via IDE
+Abra o projeto na IDE, defina o caminho da imagem e a resolução desejada. O arquivo convertido será salvo na pasta raiz do projeto.
+O arquivo convertido será salvo automaticamente no diretório do projeto.
 
 ## Considerações
 
-- Para melhor resultado, escolha inicialmente uma resolução baixa por exemplo 10, e vá aumentando até que a imagem gerada esteja em um tamanho e resolução adequados.
-- A resolução e o tamanho do pixel deverão ser ajustados para equilibrar detalhes e tamanho da saída.
+- Para obter melhores resultados, comece com uma resolução baixa (exemplo: 10%) e aumente progressivamente.
+- Ajuste a resolução e o tamanho do pixel conforme necessário para obter um nível adequado de detalhes.
 
 ## Exemplo de Saída
 
-Imagem com 50% de resolução
-![Imagem com 50% de resolução](ImagemGerada-resolucao50.jpg)
+- **Imagem com 50% de resolução**, Saturação 0.4, Tamanho de pixel 25. Tamanho final: **3.63MB**
+  ![Imagem com 50% de resolução](ImagemGerada-resolucao50.jpg)
 
-Imagem com 80% de resolução
-![Imagem com 80% de resolução](ImagemGerada-resolucao80.jpg)
+- **Imagem com 80% de resolução**, Saturação 0.4, Tamanho de pixel 25. Tamanho final: **9.06MB**
+  ![Imagem com 80% de resolução](ImagemGerada-resolucao80.jpg)
 
-
-
-
-
-
-
+- **Imagem com 100% de resolução**, Saturação 0.2, Tamanho de pixel 10. Tamanho final: **2.78MB**
+  ![Imagem com 100% de resolução](ImagemGerada-resolucao100.jpg)

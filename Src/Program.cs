@@ -1,12 +1,12 @@
-﻿using EstudoImagemCirculo;
+﻿using EstudoImagemElipse;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 
 internal class Program
 {
-    private const int resolucao = 80;
-    private const double saturacao = 0.4;
-    private const int tamanhoPixel = 25;
+    private const int resolucao = 100;
+    private const double saturacao = 0.2;
+    private const int tamanhoPixel = 10;
     private const string caminhoOrigem = "../../../../Eu.jpg";
 
     private static void Main()
