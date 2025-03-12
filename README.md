@@ -3,8 +3,9 @@
 ## Descrição
 
 Este é um projeto de estudo desenvolvido para ser executado via linha de comando (CLI) ou diretamente pela IDE de desenvolvimento. O objetivo é carregar uma imagem, processar seus pixels e gerar uma nova imagem composta por formas geométricas do tipo "Elipse". 
-Assim com uma imagem é formada por pixels coloridos, a nossa imagem será formada por elipses. 
+Assim com uma imagem é formada por pixels coloridos, a nossa imagem será formada por elipses.
 Para facilitar a compreensão, utilizaremos o termo "PixelElipse".
+É conhecido como **"halftone"**.
 
 ## Requisitos
 
