@@ -88,6 +88,8 @@ O arquivo convertido será salvo automaticamente no diretório do projeto.
 
 ## Exemplo de Saída
 
+![Eu](eu.jpg)
+
 - **Imagem com 50% de resolução**, Saturação 0.4, Tamanho de pixel 25. Tamanho final: **3.63MB**
   ![Imagem com 50% de resolução](ImagemGerada-resolucao50.jpg)
 
